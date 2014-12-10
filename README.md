@@ -1,7 +1,7 @@
 BlackJack
 =========
 
-BlackJack machine learning program, meant to somewhat emulate a nueral learning system, ends up running at about 48% win rate, pretty much expected, only takes ~90-100k runs to reach that high. Fairly Efficient. If you want to see some previous weighting results, you can view here 
+BlackJack machine learning program, meant to somewhat emulate a neural learning system, ends up running at about 48% win rate, pretty much expected, only takes ~90-100k runs to reach that high. Fairly Efficient. If you want to see some previous weighting results, you can view here 
 https://docs.google.com/spreadsheet/ccc?key=0ApPDNFarOvUGdGhxZEtackdVWk0wcGVocHdFdWdCX0E&usp=sharing
 1=stand, 2=hit, 4=double, 3=split
 17stand, no double splits, 6 decks, pretty basic stuff. 

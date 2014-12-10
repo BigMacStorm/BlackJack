@@ -58,6 +58,10 @@ struct set{
     }
 };
 
+/*This is the data type for the moves for clarity, 
+  top refers to the dealer upcard (See readme)
+  left refers to players current position
+  move refers to the move that was made to decide later if it was good or not*/  
 struct moves
 {
     int left;
@@ -65,6 +69,7 @@ struct moves
     int move;
 };
 
+//basic struct for the player
 struct Phand{
     int total;
     int count;
@@ -77,6 +82,7 @@ struct Phand{
     void update();
 };
 
+//basic structs for the dealers hand during games.
 struct Dhand{
     int total;
     int count;
@@ -91,6 +97,9 @@ struct Dhand{
      
 };
 
+/*function for the cell type, takes the data for the current cell
+  which represents the learned expected success rate of each option,
+  and then performs a basic roulette wheel spin to decide on the best option to play*/
 int cell::roll()
 {
     int total = 0;
@@ -107,6 +116,7 @@ int cell::roll()
     return rand() % 4 + 1;
 }
 
+//print for the dealers hand
 void Dhand::print()
 {
     cout << "        Dealer's cards" << endl;
@@ -135,6 +145,7 @@ void Dhand::print()
     cout << endl;   
 } 
 
+//print for the players hand
 void Phand::print()
 {
     cout << "        Player's cards" << endl;
@@ -150,6 +161,7 @@ void Phand::print()
     cout << endl;   
 } 
 
+//updates the players hand, by checking for aces to see if you need to change the ace value from 11 to 1
 void Phand::update()
 {
     if(total > 21 && soft)
@@ -174,6 +186,7 @@ void Phand::update()
     }
 }
 
+//same update command for the dealers hand.
 void Dhand::update()
 {
     if(total > 21 && soft)
